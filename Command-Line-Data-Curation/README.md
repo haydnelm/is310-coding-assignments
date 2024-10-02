@@ -1,7 +1,7 @@
 For my assignment, I decided to store pokemon data in a rich table.
 
-The table has three columns: Name, Type, Shiny
-Name is simply the pokemon's name, type is the pokemon's type, and shiny is whether or not the pokemon is shiny t/f
+The table has three columns: Name, Type, and Shiny.
+Name is simply the pokemon's name, type is the pokemon's type, and shiny is whether or not the pokemon is shiny t/f.
 
 Upon running the script you will see an example table including charmander, bulbasaur, and squirtle. These entries will not be included in the users own table. 
 
