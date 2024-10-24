@@ -11,14 +11,14 @@ import pyeuropeana.utils as utils
 result = apis.search(query='lasagna')
 dataframe = utils.search2df(result)
 
-csv_file_path = r'\\wsl.localhost\Ubuntu\home\haydnelm\is310-coding-assignments\API-getting-data\europeana_search_results.csv'
+csv_file_path = r'\\wsl.localhost\Ubuntu\home\haydnelm\is310-coding-assignments\API-getting-data\europeana_search_results.csv' #I've hardcoded my filepath, you'll have to change this if you want to use this code
 dataframe.to_csv(csv_file_path, index=False)
 print(dataframe)
 
 user_details = steam.users.get_user_details("76561198371006443")
 user_details_df = pd.DataFrame([user_details])
 
-user_csv_file_path = r'\\wsl.localhost\Ubuntu\home\haydnelm\is310-coding-assignments\API-getting-data\steam_user_details.csv'
+user_csv_file_path = r'\\wsl.localhost\Ubuntu\home\haydnelm\is310-coding-assignments\API-getting-data\steam_user_details.csv' # Same as above
 user_details_df.to_csv(user_csv_file_path, index=False)
 print(user_details_df)
 
