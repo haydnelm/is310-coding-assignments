@@ -1,5 +1,6 @@
 from bs4 import *
 import requests
+import csv
 
 url = 'https://oldschool.runescape.wiki/w/Boss'
 response = requests.get(url)
@@ -48,3 +49,9 @@ for boss, items in boss_unique_items:
             current_boss = boss
         print(f"{boss}: {', '.join(items)}")
 print()
+
+with open('boss_unique_items.csv', 'w', newline='') as csvfile:
+    csvwriter = csv.writer(csvfile)
+    csvwriter.writerow(['Boss', 'Unique Items'])
+    for boss, items in boss_unique_items:
+        csvwriter.writerow([boss, ', '.join(items)])
